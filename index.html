@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    
+    <!-- HEADER/NAVBAR -->
+    <header class="w-full border-b border-gray-200 bg-white ">
+        <nav aria-label="Main"
+            class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-5 py-3">
+            <a href="index.html" class="flex items-center gap-2 text-base font-bold text-slate-900 italic ">
+                <span
+                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 text-sm text-white p-">B/S</span>
+                BookSwap
+            </a>
+            <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-slate-600">
+                <li><a href="index.html" aria-current="page" class="text-blue-700">Home</a></li>
+                <li><a href="#" class="transition-colors hover:text-slate-900 ">Features</a></li>
+                <li><a href="#" class="transition-colors hover:text-slate-900 ">Pricing</a></li>
+                <li><a href="#" class="transition-colors hover:text-slate-900 ">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- HEROSECTION -->
+    <section class="bg-gray-100">
+        <div class="pb-1 px-4 mx-auto max-w-screen-xl text-center lg:pt-16 lg:px-12">
+            <a href="#"
+                class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-200 rounded-full"
+                role="alert">
+                <span class="text-xs bg-blue-700 rounded-full text-white px-4 py-1.5 mr-3 italic font-bold">B/S</span>
+                <span class="text-sm font-medium">BookSwap is out! See what's new</span>
+            </a>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">
+                Nous faisons circuler le savoir entre développeurs.</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">Chez
+                BookSwap, nous connectons les apprenants de l'école pour faciliter l'échange d'ouvrages techniques,
+                partager les bonnes pratiques et faire grandir vos compétences ensemble.</p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- BARE DE RECHERCHE -->
+    <div class="grid gap-4 md:grid-cols-[1fr_260px] mx-auto max-w-screen-xl pt-10">
+        <div>
+            <label for="search" class="mb-2 block text-sm font-semibold text-slate-700">Rechercher un employé</label>
+            <input id="search" name="search" type="search" placeholder="Prénom ou nom..."
+                class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
+        </div>
+        <div>
+            <label for="department-filter" class="mb-2 block text-sm font-semibold text-slate-700">Echange type</label>
+            <select id="department-filter" name="department"
+                class="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
+                <option value="">Tous</option>
+                <option value="temporary">Temporary</option>
+                <option value="permanent">Permanent</option>
+            </select>
+        </div>
+    </div>
+    <!-- AFFICHAGE DE FILM -->
+    <section id="books-slots" class="mx-auto max-w-7xl px-15 pt-15">
+        <div class="mb-8">
+            <p class="mb-1 text-[.7rem] font-extrabold uppercase tracking-[.2em] text-blue-700">À découvrir</p>
+            <h2 class="text-2xl font-black tracking-tight sm:text-3xl">Books pour l'échange</h2>
+        </div>
+        <div id="books-container" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-live="polite">
+
+        </div>
+    </section>
     <script src="app.js"></script>
 </body>
+
 </html>
