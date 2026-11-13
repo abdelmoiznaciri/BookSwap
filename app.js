@@ -16,7 +16,7 @@ function affichageDesLivres(data) {
             <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg"
                 data-book-id=${bookData.id}>
                 <div class="relative">
-                    <img src="assets/image.png" alt="Nella Fossa dei
+                    <img src="http://127.0.0.1:8000${bookData.book.image_url }" alt="Nella Fossa dei
                     Leoni" class="aspect-[2/3] w-full object-cover"><span
                         class="absolute bottom-3 right-3 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold shadow-lg">${bookData.exchange_type}</span>
                 </div>
