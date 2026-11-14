@@ -48,7 +48,7 @@ function affichageDesLivres(data) {
                     ${bookData.book.category.name}
                   </span>
 
-                  <div class="flex flex-wrap gap-1">
+                  <div class="flex flex-wrap gap-1 pb-3">
                     ${bookTags(bookData.book.tags)}
                   </div>
 
@@ -68,7 +68,7 @@ function affichageDesLivres(data) {
                   </span>
                 </div>
 
-                <p class="text-xs text-gray-500 mb-3">
+                <p class="${dateOfExchange(bookData.exchange_type)}">
                   ${bookData.start_date} - ${bookData.end_date}
                 </p>
 
@@ -105,7 +105,11 @@ function bookstatus(status) {
 }
 
 function dateOfExchange(status) {
-  if(status.trim().toLowerCase() === 'temporary'){
-    
+  timeSpanClass = ''
+  if(status.trim().toLowerCase() === 'permanent'){
+    timeSpanClass += 'hidden'
+  }else {
+    timeSpanClass+= 'text-xs text-gray-500 mb-3'
   }
+  return timeSpanClass
 }
